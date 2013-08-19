@@ -26,8 +26,6 @@ public class NoteActivity extends Activity implements View.OnClickListener {
 
 static final String PREF_ACCOUNT_NAME = "accountName";
 
-	private static final int REQUEST_CODE_RESOLVE_ERR_SHOW_NOTE = 5000;
-
 	GoogleAccountCredential credential;
 	SharedPreferences settings;
 	String accountName;
