@@ -1,0 +1,217 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://cloudnotetesting.appspot.com/_ah/api",
+  "name" : "noteendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://cloudnotetesting.appspot.com/_ah/spi",
+    "deadline" : 10.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "cloudnotes.com",
+  "ownerName" : "cloudnotes.com",
+  "methods" : {
+    "noteendpoint.updateNote" : {
+      "path" : "note",
+      "httpMethod" : "PUT",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.updateNote",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "noteendpoint.insertNote" : {
+      "path" : "note",
+      "httpMethod" : "POST",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.insertNote",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "noteendpoint.getNote" : {
+      "path" : "note/{id}",
+      "httpMethod" : "GET",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.getNote",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "noteendpoint.removeNote" : {
+      "path" : "note/{id}",
+      "httpMethod" : "DELETE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.removeNote",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "noteendpoint.listMyNotes" : {
+      "path" : "note",
+      "httpMethod" : "GET",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.listNote",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "noteendpoint.getAllNotes" : {
+      "path" : "collectionresponse_note",
+      "httpMethod" : "GET",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ],
+      "audiences" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com" ],
+      "clientIds" : [ "13243339971-s4n57pph9affr16d6nu5gsr35gunhdf7.apps.googleusercontent.com", "13243339971.apps.googleusercontent.com", "3-ios-apps.googleusercontent.com" ],
+      "rosyMethod" : "com.cloudnotes.NoteEndpoint.getNotes",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Note" : {
+        "id" : "Note",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "emailAddress" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CollectionResponse_Note" : {
+        "id" : "CollectionResponse_Note",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Note"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.cloudnotes.NoteEndpoint.updateNote" : {
+        "request" : {
+          "$ref" : "Note"
+        },
+        "response" : {
+          "$ref" : "Note"
+        }
+      },
+      "com.cloudnotes.NoteEndpoint.insertNote" : {
+        "request" : {
+          "$ref" : "Note"
+        },
+        "response" : {
+          "$ref" : "Note"
+        }
+      },
+      "com.cloudnotes.NoteEndpoint.getNote" : {
+        "response" : {
+          "$ref" : "Note"
+        }
+      },
+      "com.cloudnotes.NoteEndpoint.removeNote" : {
+      },
+      "com.cloudnotes.NoteEndpoint.listNote" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Note"
+        }
+      },
+      "com.cloudnotes.NoteEndpoint.getNotes" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Note"
+        }
+      }
+    }
+  }
+}

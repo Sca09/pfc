@@ -1,0 +1,27 @@
+# view AndroidManifest.xml #generated:46
+-keep class com.cloudnotes.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:66
+-keep class com.cloudnotes.ListMyNotesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.cloudnotes.ListNotesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:28
+-keep class com.cloudnotes.MainMenuActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.cloudnotes.NewNoteActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:70
+-keep class com.cloudnotes.NoteActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class com.cloudnotes.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
+
+# view res/layout/main_menu.xml #generated:11
+-keep class com.google.android.gms.common.SignInButton { <init>(...); }
+
