@@ -987,7 +987,6 @@ com.cloudnotes.NewNoteActivity:
     static final java.lang.String PREF_ACCOUNT_NAME
 com.cloudnotes.NoteActivity:
     static final java.lang.String PREF_ACCOUNT_NAME
-    private static final int REQUEST_CODE_RESOLVE_ERR_SHOW_NOTE
 com.cloudnotes.R
 com.cloudnotes.R$attr
 com.cloudnotes.R$color
