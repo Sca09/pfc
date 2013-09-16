@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Google Cloud EndPoints - Cloud Notes</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/base.js"></script>
+		<link type="text/css" rel="stylesheet" href="/css/base.css">
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function init() {
+				google.endpoints.notesApi.init('//localhost:8888/_ah/api');
+				//google.endpoints.notesApi.init('//cloudendpointsservergae.appspot.com/_ah/api');
+			}
+		</script>
+		<script src="https://apis.google.com/js/client.js?onload=init"></script>
+		
+		<div id="homeButton">
+			<form>
+				<button type="button" onclick="google.endpoints.notesApi.showHome();">Home</button>
+			</form>
+		</div>
+		
+		<div id="mainMenu" class="shown">
+			<form>
+				<button type="button" onclick="google.endpoints.notesApi.list();">List Notes</button>
+				<br>
+				<button type="button" onclick="google.endpoints.notesApi.showNewNote();">New Note</button>
+			</form>
+		</div>
+		
+		<div id="listNotes" class="hidden">
+			<table id="listTable"></table>
+		</div>
+		
+		<div id="newNote" class="hidden">
+			<form action="">
+				<input type="text" name="id" class="newId" placeholder="Id">
+				<br>
+				<input type="text" name="emailAddress" class="newEmailAddress" placeholder="Mail">
+				<br>
+				<input type="text" col="5" name="description" class="newDescription" placeholder="Description">
+				<br><br>
+				<button type="button" onclick="google.endpoints.notesApi.add();">Add Note</button>
+			</form>
+		</div>
+		
+		<div id="note" class="hidden">
+			<form action="">
+				<button type="button" onclick="google.endpoints.notesApi.list();">Back to list</button>
+				<br><br>
+				<input type="text" name="id" class="id" placeholder="Id" readonly>
+				<br>
+				<input type="text" name="emailAddress" class="emailAddress" placeholder="Mail">
+				<br>
+				<input type="text" col="5" name="description" class="description" placeholder="Description">
+				<br><br>
+				<button type="button" onclick="google.endpoints.notesApi.update();">Update Note</button>
+				<button type="button" onclick="google.endpoints.notesApi.remove();">Remove Note</button>
+			</form>
+		</div>
+		
+	</body>
+</html>
