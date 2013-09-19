@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.appspot.cloudendpointsservergae.noteendpoint.CloudEndpointUtils;
 import com.appspot.cloudendpointsservergae.noteendpoint.Noteendpoint;
 import com.appspot.cloudendpointsservergae.noteendpoint.model.Note;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -30,20 +31,23 @@ public class NewNoteActivity extends Activity implements View.OnClickListener {
 				new JacksonFactory(), 
 				null);
 		
-//		final boolean enableGZip = builder.getRootUrl().startsWith("https:");
+//		// For local development
+//		builder.setRootUrl("http://10.0.2.2:8888/_ah/api/");
 //
-//	    builder.setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-//	      public void initialize(AbstractGoogleClientRequest<?> request)
-//	          throws IOException {
-//	        if (!enableGZip) {
-//	          request.setDisableGZipContent(true);
-//	        }
-//	      }
-//	    });
-//		
-//		service = builder.setRootUrl("http://10.0.2.2:8888/_ah/api/").build();
+//		final boolean enableGZip = builder.getRootUrl().startsWith("https:");
+//				
+//		builder.setGoogleClientRequestInitializer(new NoteendpointRequestInitializer() {
+//			protected void initializeNoteendpointRequest(NoteendpointRequest<?> request) throws IOException {
+//				if (!enableGZip) {
+//					request.setDisableGZipContent(true);		
+//				}
+//			}
+//		});
+//		// For local development
+//			    
+//		service = builder.build();
 		
-		service = CloudEndpointUtils.updateBuilder(builder).build();
+		service = CloudEndpointUtils.updateBuilder(builder).build(); 
 		
 		findViewById(R.id.newNoteButton).setOnClickListener(this);
 	}

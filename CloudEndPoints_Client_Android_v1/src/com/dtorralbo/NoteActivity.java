@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.appspot.cloudendpointsservergae.noteendpoint.CloudEndpointUtils;
 import com.appspot.cloudendpointsservergae.noteendpoint.Noteendpoint;
 import com.appspot.cloudendpointsservergae.noteendpoint.model.Note;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -30,7 +31,7 @@ public class NoteActivity extends Activity implements View.OnClickListener {
 				AndroidHttp.newCompatibleTransport(),
 				new JacksonFactory(), 
 				null);
-		
+
 		service = CloudEndpointUtils.updateBuilder(builder).build();
 		
 		@SuppressWarnings("unchecked")

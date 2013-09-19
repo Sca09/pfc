@@ -5,12 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.appspot.cloudendpointsservergae.noteendpoint.Noteendpoint;
-import com.appspot.cloudendpointsservergae.noteendpoint.model.CollectionResponseNote;
-import com.appspot.cloudendpointsservergae.noteendpoint.model.Note;
-import com.google.api.client.extensions.android.http.AndroidHttp;
-import com.google.api.client.json.jackson.JacksonFactory;
-
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -19,9 +13,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.AdapterView.OnItemClickListener;
+
+import com.appspot.cloudendpointsservergae.noteendpoint.CloudEndpointUtils;
+import com.appspot.cloudendpointsservergae.noteendpoint.Noteendpoint;
+import com.appspot.cloudendpointsservergae.noteendpoint.model.CollectionResponseNote;
+import com.appspot.cloudendpointsservergae.noteendpoint.model.Note;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.json.jackson.JacksonFactory;
 
 public class ListNotesActivity extends ListActivity {
 	
@@ -38,7 +39,7 @@ public class ListNotesActivity extends ListActivity {
 				AndroidHttp.newCompatibleTransport(),
 				new JacksonFactory(), 
 				null);
-		
+			    
 		service = CloudEndpointUtils.updateBuilder(builder).build();
 		
 		new ListNotesAsyncTask(this).execute();
