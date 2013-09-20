@@ -1,6 +1,6 @@
 {
  "kind": "discovery#rpcDescription",
- "etag": "\"VkkzLg1qSf2dHM9_JADuPMcBnRo/TtrXYrPu6JRNtwynhEtyDQN63Ac\"",
+ "etag": "\"VkkzLg1qSf2dHM9_JADuPMcBnRo/LfUwMSvm0JZ5PHGpA33uZvnO7FY\"",
  "discoveryVersion": "v1",
  "id": "noteendpoint:v1",
  "name": "noteendpoint",
@@ -59,6 +59,15 @@
    "location": "query"
   }
  },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
  "schemas": {
   "CollectionResponse_Note": {
    "id": "CollectionResponse_Note",
@@ -106,7 +115,10 @@
    ],
    "returns": {
     "$ref": "Note"
-   }
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
   },
   "noteendpoint.note.insert": {
    "id": "noteendpoint.note.insert",
@@ -120,7 +132,10 @@
    ],
    "returns": {
     "$ref": "Note"
-   }
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
   },
   "noteendpoint.note.list": {
    "id": "noteendpoint.note.list",
@@ -136,7 +151,10 @@
    },
    "returns": {
     "$ref": "CollectionResponse_Note"
-   }
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
   },
   "noteendpoint.note.patch": {
    "id": "noteendpoint.note.patch",
@@ -157,7 +175,10 @@
    ],
    "returns": {
     "$ref": "Note"
-   }
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
   },
   "noteendpoint.note.remove": {
    "id": "noteendpoint.note.remove",
@@ -169,6 +190,9 @@
    },
    "parameterOrder": [
     "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
    ]
   },
   "noteendpoint.note.update": {
@@ -183,7 +207,10 @@
    ],
    "returns": {
     "$ref": "Note"
-   }
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
   }
  }
 }
