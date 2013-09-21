@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VkkzLg1qSf2dHM9_JADuPMcBnRo/LfUwMSvm0JZ5PHGpA33uZvnO7FY\"",
+ "etag": "\"_SAkL5LfohOjTvNX8memTU9s4HI/LfUwMSvm0JZ5PHGpA33uZvnO7FY\"",
  "discoveryVersion": "v1",
  "id": "noteendpoint:v1",
  "name": "noteendpoint",
