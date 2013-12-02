@@ -27,6 +27,7 @@
     "noteendpoint.note.remove" : {
       "path" : "note/{id}",
       "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
@@ -47,6 +48,7 @@
     "noteendpoint.note.insert" : {
       "path" : "note",
       "httpMethod" : "POST",
+      "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
@@ -62,6 +64,7 @@
     "noteendpoint.note.get" : {
       "path" : "note/{id}",
       "httpMethod" : "GET",
+      "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
@@ -79,9 +82,26 @@
         "body" : "autoTemplate(backendResponse)"
       }
     },
+    "noteendpoint.note.update" : {
+      "path" : "note",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.dtorralbo.spi.NoteEndpoint.updateNote",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
     "noteendpoint.note.list" : {
       "path" : "note",
       "httpMethod" : "GET",
+      "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
@@ -98,21 +118,6 @@
           }
         },
         "body" : "empty"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
-    "noteendpoint.note.update" : {
-      "path" : "note",
-      "httpMethod" : "PUT",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.dtorralbo.spi.NoteEndpoint.updateNote",
-      "request" : {
-        "body" : "autoTemplate(backendRequest)",
-        "bodyName" : "resource"
       },
       "response" : {
         "body" : "autoTemplate(backendResponse)"
@@ -168,17 +173,17 @@
           "$ref" : "Note"
         }
       },
-      "com.dtorralbo.spi.NoteEndpoint.listNote" : {
-        "response" : {
-          "$ref" : "CollectionResponse_Note"
-        }
-      },
       "com.dtorralbo.spi.NoteEndpoint.updateNote" : {
         "request" : {
           "$ref" : "Note"
         },
         "response" : {
           "$ref" : "Note"
+        }
+      },
+      "com.dtorralbo.spi.NoteEndpoint.listNote" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Note"
         }
       }
     }

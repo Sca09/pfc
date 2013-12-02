@@ -79,7 +79,7 @@ public class ListNotesActivity extends ListActivity {
 		}
 		
 		@Override
-		protected void onPostExecute(List<com.appspot.cloudendpointsservergae.noteendpoint.model.Note> result) {
+		protected void onPostExecute(List<Note> result) {
 
 			if(result != null) {
 			
@@ -87,7 +87,7 @@ public class ListNotesActivity extends ListActivity {
 				
 				List<HashMap<String, String>> fillMaps = new ArrayList<HashMap<String, String>>();
 				
-				for(com.appspot.cloudendpointsservergae.noteendpoint.model.Note note : result) {
+				for(Note note : result) {
 					HashMap<String, String> map = new HashMap<String, String>();
 					
 					map.put("id", note.getId());
