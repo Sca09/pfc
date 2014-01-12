@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/shared/appengine-local-runtime-shared.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
@@ -65,21 +66,6 @@
 			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/opt/user/jsr107/v1/appengine-jsr107cache-1.8.8.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/opt/user/jsr107/v1/jsr107cache-1.1.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/user/appengine-api-1.0-sdk-1.8.8.jar" sourcepath="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/src/user/appengine-api-1.0-sdk-1.8.8-src.zip">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/opt/user/datanucleus/v2/asm-4.0.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
@@ -120,6 +106,20 @@
 			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/opt/user/jsr107/v1/appengine-jsr107cache-1.8.8.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/opt/user/jsr107/v1/jsr107cache-1.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/lib/user/appengine-api-1.0-sdk-1.8.8.jar" sourcepath="/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/src/user/appengine-api-1.0-sdk-1.8.8-src.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/davidtorralbo/Documents/Development/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.8/appengine-java-sdk-1.8.8/docs/javadoc/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
