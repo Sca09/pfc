@@ -17,56 +17,61 @@
 
 	<body>
 		<script type="text/javascript">
-			function init() {
-				google.endpoints.notesApi.init('//' + window.location.host + '/_ah/api');
-			}
-		</script>
+	                        function init() {
+	                                google.endpoints.notesApi.init('//' + window.location.host + '/_ah/api');
+	                        }
+	                </script>
 		<script src="https://apis.google.com/js/client.js?onload=init"></script>
-		
+	
 		<div id="homeButton">
 			<form>
 				<button type="button" onclick="google.endpoints.notesApi.showHome();">Home</button>
 			</form>
 		</div>
-		
+	
 		<div id="mainMenu" class="shown">
 			<form>
-				<button type="button" onclick="google.endpoints.notesApi.list();">List Notes</button>
+				<button type="button" onclick="google.endpoints.notesApi.list();">List
+					Notes</button>
 				<br>
-				<button type="button" onclick="google.endpoints.notesApi.showNewNote();">New Note</button>
+				<button type="button"
+					onclick="google.endpoints.notesApi.showNewNote();">New Note</button>
 			</form>
 		</div>
-		
+	
 		<div id="listNotes" class="hidden">
 			<table id="listTable"></table>
 		</div>
-		
+	
 		<div id="newNote" class="hidden">
 			<form action="">
 				<input type="text" name="id" class="newId" placeholder="Id">
+				<br> <input type="text" name="emailAddress"
+					class="newEmailAddress" placeholder="Mail"> <br> <input
+					type="text" col="5" name="description" class="newDescription"
+					placeholder="Description"> <br>
 				<br>
-				<input type="text" name="emailAddress" class="newEmailAddress" placeholder="Mail">
-				<br>
-				<input type="text" col="5" name="description" class="newDescription" placeholder="Description">
-				<br><br>
-				<button type="button" onclick="google.endpoints.notesApi.add();">Add Note</button>
+				<button type="button" onclick="google.endpoints.notesApi.add();">Add
+					Note</button>
 			</form>
 		</div>
-		
+	
 		<div id="note" class="hidden">
 			<form action="">
-				<button type="button" onclick="google.endpoints.notesApi.list();">Back to list</button>
-				<br><br>
-				<input type="text" name="id" class="id" placeholder="Id" readonly>
+				<button type="button" onclick="google.endpoints.notesApi.list();">Back
+					to list</button>
 				<br>
-				<input type="text" name="emailAddress" class="emailAddress" placeholder="Mail">
+				<br> <input type="text" name="id" class="id" placeholder="Id"
+					readonly> <br> <input type="text" name="emailAddress"
+					class="emailAddress" placeholder="Mail"> <br> <input
+					type="text" col="5" name="description" class="description"
+					placeholder="Description"> <br>
 				<br>
-				<input type="text" col="5" name="description" class="description" placeholder="Description">
-				<br><br>
-				<button type="button" onclick="google.endpoints.notesApi.update();">Update Note</button>
-				<button type="button" onclick="google.endpoints.notesApi.remove();">Remove Note</button>
+				<button type="button" onclick="google.endpoints.notesApi.update();">Update
+					Note</button>
+				<button type="button" onclick="google.endpoints.notesApi.remove();">Remove
+					Note</button>
 			</form>
 		</div>
-		
 	</body>
 </html>

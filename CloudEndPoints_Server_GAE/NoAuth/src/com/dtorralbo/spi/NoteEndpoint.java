@@ -19,15 +19,11 @@ import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
 
 @Api(
-	name = "noteendpoint",
-	version = "v1"
+		name = "noteendpoint",
+        version = "v1"
 )
 public class NoteEndpoint {
 
-	private static PersistenceManager getPersistenceManager() {
-		return PMF.get().getPersistenceManager();
-	}
-	
 	/**
 	 * This method lists all the entities inserted in datastore.
 	 * It uses HTTP GET method and paging support.
@@ -167,4 +163,9 @@ public class NoteEndpoint {
 		}
 		return contains;
 	}
+
+	private static PersistenceManager getPersistenceManager() {
+		return PMF.get().getPersistenceManager();
+	}
+
 }
