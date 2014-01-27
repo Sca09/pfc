@@ -76,33 +76,33 @@ google.endpoints.notesApi.list = function() {
 	gapi.client.noteendpoint.note
 			.list()
 			.execute(
-					function(resp) {
-						var listTable = document.getElementById('listTable');
-						listTable.innerHTML = '';
+				function(resp) {
+					var listTable = document.getElementById('listTable');
+					listTable.innerHTML = '';
 
-						var header = document.createElement('tr');
-						header.innerHTML = "<th>Id</th><th>Mail</th><th>Note</th>";
-						listTable.appendChild(header);
+					var header = document.createElement('tr');
+					header.innerHTML = "<th>Id</th><th>Mail</th><th>Note</th>";
+					listTable.appendChild(header);
 
-						if (resp.items) {
-							for (var i = 0; i < resp.items.length; i++) {
-								var note = document.createElement('tr');
-								note.innerHTML = "<td><a href=\"javascript:google.endpoints.notesApi.showNote('"
-										+ resp.items[i].id
-										+ "', '"
-										+ resp.items[i].emailAddress
-										+ "', '"
-										+ resp.items[i].description
-										+ "')\">"
-										+ resp.items[i].id
-										+ "</a></td><td>"
-										+ resp.items[i].emailAddress
-										+ "</td><td>"
-										+ resp.items[i].description + "</td>";
-								listTable.appendChild(note);
-							}
+					if (resp.items) {
+						for (var i = 0; i < resp.items.length; i++) {
+							var note = document.createElement('tr');
+							note.innerHTML = "<td><a href=\"javascript:google.endpoints.notesApi.showNote('"
+								+ resp.items[i].id
+								+ "', '"
+								+ resp.items[i].emailAddress
+								+ "', '"
+								+ resp.items[i].description
+								+ "')\">"
+								+ resp.items[i].id
+								+ "</a></td><td>"
+								+ resp.items[i].emailAddress
+								+ "</td><td>"
+								+ resp.items[i].description + "</td>";
+							listTable.appendChild(note);
 						}
-					});
+					}
+				});
 };
 
 google.endpoints.notesApi.update = function() {

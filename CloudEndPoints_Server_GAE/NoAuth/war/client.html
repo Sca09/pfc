@@ -14,13 +14,13 @@
 		<script type="text/javascript" src="/js/base.js"></script>
 		<link type="text/css" rel="stylesheet" href="/css/base.css">
 	</head>
-
+	
 	<body>
 		<script type="text/javascript">
-	                        function init() {
-	                                google.endpoints.notesApi.init('//' + window.location.host + '/_ah/api');
-	                        }
-	                </script>
+			function init() {
+				google.endpoints.notesApi.init('//' + window.location.host + '/_ah/api');
+			}
+		</script>
 		<script src="https://apis.google.com/js/client.js?onload=init"></script>
 	
 		<div id="homeButton">
@@ -49,8 +49,7 @@
 				<br> <input type="text" name="emailAddress"
 					class="newEmailAddress" placeholder="Mail"> <br> <input
 					type="text" col="5" name="description" class="newDescription"
-					placeholder="Description"> <br>
-				<br>
+					placeholder="Description"> <br> <br>
 				<button type="button" onclick="google.endpoints.notesApi.add();">Add
 					Note</button>
 			</form>
@@ -60,13 +59,11 @@
 			<form action="">
 				<button type="button" onclick="google.endpoints.notesApi.list();">Back
 					to list</button>
-				<br>
-				<br> <input type="text" name="id" class="id" placeholder="Id"
-					readonly> <br> <input type="text" name="emailAddress"
-					class="emailAddress" placeholder="Mail"> <br> <input
-					type="text" col="5" name="description" class="description"
-					placeholder="Description"> <br>
-				<br>
+				<br> <br> <input type="text" name="id" class="id"
+					placeholder="Id" readonly> <br> <input type="text"
+					name="emailAddress" class="emailAddress" placeholder="Mail">
+				<br> <input type="text" col="5" name="description"
+					class="description" placeholder="Description"> <br> <br>
 				<button type="button" onclick="google.endpoints.notesApi.update();">Update
 					Note</button>
 				<button type="button" onclick="google.endpoints.notesApi.remove();">Remove

@@ -19,7 +19,7 @@ import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
 
 @Api(
-		name = "noteendpoint",
+        name = "noteendpoint",
         version = "v1"
 )
 public class NoteEndpoint {
